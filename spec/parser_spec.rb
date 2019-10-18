@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../services/parser'
+require_relative '../../services/ser'
 require 'simplecov'
 SimpleCov.start
 

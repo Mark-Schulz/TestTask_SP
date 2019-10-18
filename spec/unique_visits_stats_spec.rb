@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../services/parser'
-require_relative '../services/unique_converter'
+require_relative '../../services/ser'
+require_relative '../../services/unique_converter'
 
-RSpec.describe UniqueConverter do
+RSpec.describe UniqueVisitsStats do
   let(:correct_file_path) { 'spec/fixtures/file/correct_file_with_unique_data.log' }
   let(:parser) { Parser.new }
   let(:correct_statistics) { { '/help_page/1' => 1, '/contact' => 1} }

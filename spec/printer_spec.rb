@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../services/parser'
-require_relative '../services/unique_converter'
-require_relative '../services/format_transducer'
+require_relative '../../services/ser'
+require_relative '../../services/unique_converter'
+require_relative '../../services/format_transducer'
 
-RSpec.describe FormatTransducer do
+RSpec.describe Printer do
   let(:correct_file_path) { 'spec/fixtures/file/correct_file_with_unique_data.log' }
   let(:parser) { Parser.new }
   let(:correct_statistics) { { '/help_page/1' => 1, '/contact' => 1} }
@@ -13,7 +13,7 @@ RSpec.describe FormatTransducer do
     parser.file_reader(correct_file_path)
     parser.info_parser
   end
-  let(:unique_converter_obj) { UniqueConverter.new(parser.information) }
+  let(:unique_converter_obj) { UniqueVisitsStats.new(parser.information) }
 
   before do
     unique_converter_obj.convert

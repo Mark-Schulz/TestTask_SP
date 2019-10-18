@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative '../services/parser'
-require_relative '../services/simple_converter'
+require_relative '../services/ser'
+require_relative '../services/ple_converter'
 require_relative '../services/unique_converter'
 require_relative '../services/format_transducer'
 

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../services/parser'
-require_relative '../services/simple_converter'
+require_relative '../../services/ser'
+require_relative '../../services/simple_converter'
 
-RSpec.describe SimpleConverter do
+RSpec.describe AllVisitsStats do
   let(:correct_file_path) { 'spec/fixtures/file/correct_file.log' }
   let(:parser) { Parser.new }
   let(:correct_statistics) { { '/help_page/1' => 1, '/contact' => 1, '/home' => 1 } }
