@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class FormatTransducer
+class Printer
   attr_reader :statistics
 
   def initialize(statistics)

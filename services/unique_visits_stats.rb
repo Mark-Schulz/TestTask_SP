@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UniqueConverter
+class UniqueVisitsStats
   attr_reader :data_structure, :unique_statistics
 
   def initialize(data_structure)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SimpleConverter
+class AllVisitsStats
   attr_reader :data_structure, :all_statistics
 
   def initialize(data_structure)
