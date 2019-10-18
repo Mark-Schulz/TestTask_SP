@@ -1,7 +1,5 @@
 require 'rspec'
-require_relative '../../services/ser'
-require 'simplecov'
-SimpleCov.start
+require_relative '../services/parser'
 
 RSpec.describe Parser do
   subject { described_class.new }
@@ -41,10 +39,6 @@ RSpec.describe Parser do
 
     it 'return correctly formatted information' do
       expect(subject.information).to eq(correct_parsing_content)
-    end
-
-    it 'is an instance of Array' do
-      expect(subject.information).to be_an_instance_of Array
     end
   end
 end

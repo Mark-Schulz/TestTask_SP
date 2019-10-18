@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../../services/ser'
-require_relative '../../services/unique_converter'
+require_relative '../services/parser'
+require_relative '../services/unique_visits_stats'
 
 RSpec.describe UniqueVisitsStats do
   let(:correct_file_path) { 'spec/fixtures/file/correct_file_with_unique_data.log' }
@@ -30,14 +30,6 @@ RSpec.describe UniqueVisitsStats do
     it 'have unique host names' do
       subject.convert
       expect(subject.unique_statistics.keys).to eq(correct_statistics.keys)
-    end
-
-    it 'is an instance of Hash' do
-      expect(subject.unique_statistics).to be_an_instance_of Hash
-    end
-
-    it 'data_structure is an instance of Array' do
-      expect(subject.data_structure).to be_an_instance_of Array
     end
   end
 end

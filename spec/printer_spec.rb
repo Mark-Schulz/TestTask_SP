@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../../services/ser'
-require_relative '../../services/unique_converter'
-require_relative '../../services/format_transducer'
+require_relative '../services/parser'
+require_relative '../services/unique_visits_stats'
+require_relative '../services/printer'
 
 RSpec.describe Printer do
   let(:correct_file_path) { 'spec/fixtures/file/correct_file_with_unique_data.log' }
@@ -29,10 +29,6 @@ RSpec.describe Printer do
   context 'when format_transducer statistics are transformed' do
     it 'is not empty' do
       expect(subject.statistics.empty?).not_to eq(true)
-    end
-
-    it 'is an instance of Hash' do
-      expect(subject.statistics).to be_an_instance_of Hash
     end
   end
 end
